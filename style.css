@@ -38,6 +38,7 @@ header{
     background: transparent;
     padding:30px 15%;
     transition: all .50s ease;
+    background: var(--bg-color);
 }
 
 .logo img{
@@ -56,6 +57,10 @@ header{
     font-weight: 400;
     color: var(--other-color);
     transition: all .40s ease;
+}
+
+.home{
+    margin-top: 10px;
 }
 
 .navbar a:hover{
