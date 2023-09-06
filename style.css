@@ -68,7 +68,7 @@ header{
 }
 
 .h-btn{
-    display: flex;
+    display: none;
     align-items: center;
 }
 
@@ -261,3 +261,15 @@ section{
     margin-top: 20px;
 }
 
+#icons a{
+    display:inline-block;
+    font-size: 30px;
+    color:var(--other-color);
+    margin-right: 17px;
+    transition: all .45s ease;
+}
+
+#icons a:hover{
+    transform: translateY(-3px);
+    color: var(--text-color);
+}
