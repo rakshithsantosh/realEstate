@@ -114,6 +114,7 @@ section{
     grid-template-columns: repeat(2,1fr);
     align-items:center;
     gap:4.5rem;
+    margin-top: 30px;
 }
 
 .home-text h1{
@@ -137,6 +138,7 @@ section{
 }
 
 .h-search form{
+    display: none;
     position: relative;
     width:410px;
     max-width: 100%;
@@ -184,7 +186,7 @@ section{
 .intro-text p{
     font-size: var(--p-font);
     color:var(--other-color);
-    line-height: 30px;
+    line-height: 25px;
     margin-bottom: 2.5rem;
 }
 
@@ -272,4 +274,47 @@ section{
 #icons a:hover{
     transform: translateY(-3px);
     color: var(--text-color);
+}
+
+.buying{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:4.5rem;
+    margin-top: 50px;
+}
+
+.buying-image img{
+    height:400px;
+    width:400px;
+    border-radius: 10px;
+}
+
+.tips{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:4.5rem;
+    margin-top: 50px;
+}
+
+#tips-content{
+    margin-top: 10px;
+    font-size: var(--p-font);
+    color: var(--other-color);
+}
+
+#tips-content p{
+    margin-bottom: 10px;
+}
+
+#tips-image img{
+    margin-top: 20px;
+    height: 500px;
+    width: 500px;
+}
+
+.buying-content h2{
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--other-color);
 }
