@@ -318,3 +318,47 @@ section{
     margin-bottom: 20px;
     color: var(--other-color);
 }
+
+.selling-content{
+    margin-top: 40px;
+}
+
+.top-content p{
+    margin-top: 10px;
+    font-size: var(--p-font);
+    color: var(--other-color);
+}
+
+.selling-content ol li{
+    margin-top: 10px;
+    font-size: var(--p-font);
+    color: var(--other-color);
+}
+
+.top-content img{
+    height : 400px;
+    width:400px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.top-content{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:4.5rem;
+    margin-bottom: 30px;
+}
+
+.top-content h3{
+    font-size: 30px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--other-color);
+}
+
+.selling-content p{
+    margin-top: 30px;
+    font-size: var(--p-font);
+    color: var(--other-color);
+}
