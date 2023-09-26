@@ -21,7 +21,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body data-barba="wrapper">
     <!--header-->
     <header>
       <a href="#" class="logo">
@@ -44,6 +44,21 @@
       </div>
     </header>
 
+    <div class="container" data-aos="zoom-in-up">
+      <form onsubmit="sendEmail(); reset(); return false;">
+        <h3>Get in Touch</h3>
+        <input type="text" id="name" placeholder="youe name" required />
+        <input type="email" id="email" placeholder="Email Id" required />
+        <input type="text" id="phone" placeholder="Contact Number" required />
+        <textarea
+          id="message"
+          rows="6"
+          placeholder="How can we help you?"
+        ></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
     <section class="contact">
       <div class="contact-content">
         <img src="images/logohome.png" alt="" />
@@ -63,12 +78,69 @@
       </div>
     </section>
 
+    <!---smtp js-->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+      function sendEmail() {
+        let messageBody =
+          "Name : " +
+          document.getElementById("name") +
+          "<br/> Phone : " +
+          document.getElementById("phone") +
+          "<br/> Email : " +
+          document.getElementById("email");
+        Email.send({
+          Host: "smtp.elasticemail.com",
+          Username: "rakshithsantosh@gmail.com",
+          Password: "2EB0C7A2B7822014A754D1F36A301496057A",
+          To: "krishnavenisantosh1977@gmail.com",
+          From: "rakshithsantosh@gmail.com",
+          Subject: "New Contact form enquiry ",
+          Body: messageBody,
+        }).then((message) => {
+          if (message == "OK") {
+            swal(
+              "Successful",
+              "You have successfully submitted the form!",
+              "success"
+            );
+          } else {
+            swal("Error!", "Please try again", "Error");
+          }
+        });
+      }
+    </script>
     <!--AOS Animation-->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({
         offset: 300,
         duration: 1200,
+      });
+    </script>
+    <!-- unpkg -->
+    <script src="https://unpkg.com/@barba/core"></script>
+
+    <!-- jsdelivr -->
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+    <script>
+      barba.init({
+        transitions: [
+          {
+            name: "opacity-transition",
+            leave(data) {
+              return gsap.to(data.current.container, {
+                opacity: 0,
+              });
+            },
+            enter(data) {
+              return gsap.from(data.next.container, {
+                opacity: 0,
+              });
+            },
+          },
+        ],
       });
     </script>
   </body>
